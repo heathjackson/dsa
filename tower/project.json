@@ -1,0 +1,19 @@
+{
+  "name": "tower",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tower/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tower",
+        "main": "tower/src/index.ts",
+        "tsConfig": "tower/tsconfig.lib.json",
+        "assets": ["tower/*.md"]
+      }
+    }
+  }
+}
